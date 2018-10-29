@@ -1,11 +1,9 @@
 # -*- coding: UTF-8 -*-
 
 import socket
-from secistsploit.core.exploit import *
-from secistsploit.core.tcp.tcp_scanner import tcpscanner
 
 
-class Exploit(tcpscanner):
+class Exploit():
     __info__ = {
         "name": "PortScanner",
         "description": "PortScanner",
@@ -39,6 +37,20 @@ def portscanner(ipadd,port_list):
             print('%d  端口关闭'%port_list)
             print('----------------------')
 port_list=[21,22,23,80,139,445,1433,3389,3306]
+banner=""" ____            _     _   ____        _       _ _
+         / ___|  ___  ___(_)___| |_/ ___| _ __ | | ___ (_) |_
+         \___ \ / _ \/ __| / __| __\___ \| '_ \| |/ _ \| | __|
+          ___) |  __/ (__| \__ \ |_ ___) | |_) | | (_) | | |_
+         |____/ \___|\___|_|___/\__|____/| .__/|_|\___/|_|\__|
+           Exploitation Framework for    | |      by JSMSF
+                                         |_|
+
+
+
+         Codename   : 测试漏洞利用框架
+         Version    : 1.0
+        """
+print(banner)
 print('请输入IP或者域名:')
 add = input()
 scanner(add,port_list)
