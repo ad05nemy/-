@@ -24,12 +24,10 @@ def portscanner(ipadds,port_list):
         t_1=sc.connect_ex((ipadds,port_list))
         if t_1 == 0:
             print('%d  端口开启'%port_list)
-            print('----------------------')
             sc.close()
         else:
             print('%d  端口关闭'%port_list)
-            print('----------------------')
-port_list=[21,22,23,80,139,445,1433,3389,3306]
+port_list=[21,22,23,80,139,445,3389,3306]
 banner=""" ____            _     _   ____        _       _ _
          / ___|  ___  ___(_)___| |_/ ___| _ __ | | ___ (_) |_
          \___ \ / _ \/ __| / __| __\___ \| '_ \| |/ _ \| | __|
